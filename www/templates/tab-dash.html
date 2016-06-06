@@ -1,4 +1,4 @@
-<ion-view view-title="Dashboard">
+<!-- <ion-view view-title="Dashboard">
   <ion-content class="padding">
     <h2>Welcome to Craft Beers</h2>
     <p>
@@ -9,5 +9,29 @@
        Create your free account to get started!
     </p>
 
+  </ion-content>
+</ion-view> -->
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+
+    <ion-item class="list card" ng-repeat="product in products">
+
+      <div class="item item-avatar">
+        <h2>{{product.name}}</h2>
+        <p>{{product.tagline}}</p>
+      </div>
+      <br>
+
+      <div class="item-image">
+        <img style="height: 260px; width: 260px" src="{{product.image}}">
+      </div>
+      <br>
+
+      <a class="item item-icon-left assertive" href="#">
+        <i class="icon ion-ios-pricetag-outline"></i>
+        ${{product.price}}
+      </a>
+
+    </ion-item>
   </ion-content>
 </ion-view>

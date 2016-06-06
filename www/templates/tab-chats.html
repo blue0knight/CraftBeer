@@ -3,7 +3,7 @@
     <ion-list>
       <form ng-submit="button(product)">
         <label class="item item-input">
-          <input type="text" ng-model="product.name" placeholder="Name of Craft Beer">
+          <input type="text" ng-model="product.name" placeholder="Product Name">
         </label>
         <label class="item item-input">
           <input type="text" ng-model="product.tagline" placeholder="Tagline">
@@ -14,27 +14,25 @@
         <label class="item item-input">
           <input type="text" ng-model="product.price" placeholder="Price">
         </label>
-        <br />
         <center>
-          <img style="height: 200px; width:200px" src="https://funkybuddhabrewery.com/sites/default/files/our_beer/docbrown_tapsticker.png" >
+        <img style="height: 200px; width: 200px;" src="https://funkybuddhabrewery.com/sites/default/files/our_beer/docbrown_tapsticker.png" >
         </center>
-        <br />
+        <br/>
         <button type="submit" class="button button-block button-balanced">
           Submit
         </button>
-      </form>
-      <!--
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
 
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
-      </ion-item>
-    -->
+      </form>
+      <!--<ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">-->
+        <!--<img ng-src="{{chat.face}}">-->
+        <!--<h2>{{chat.name}}</h2>-->
+        <!--<p>{{chat.lastText}}</p>-->
+        <!--<i class="icon ion-chevron-right icon-accessory"></i>-->
+
+        <!--<ion-option-button class="button-assertive" ng-click="remove(chat)">-->
+          <!--Delete-->
+        <!--</ion-option-button>-->
+      <!--</ion-item>-->
     </ion-list>
   </ion-content>
 </ion-view>

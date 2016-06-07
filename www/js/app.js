@@ -7,7 +7,8 @@
 // 'starter.controllers' is found in controllers.js
 var app = angular.module('starter', [
   'ionic',
-  'firebase'
+  'firebase',
+  'ngCordova'
 ])
 
 .run(function($ionicPlatform) {
@@ -21,11 +22,10 @@ var app = angular.module('starter', [
     }
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
-      StatusBar.styleDefault();
+      StatusBar.styleLightContent();
     }
   });
 })
-
   .constant('FURL', 'https://craft-beers.firebaseio.com/')
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -36,7 +36,7 @@ var app = angular.module('starter', [
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-  .state('login', {
+    .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
       controller: 'LoginCtrl'
@@ -62,24 +62,24 @@ var app = angular.module('starter', [
   })
 
   .state('tab.photo', {
-      url: '/photo',
-      views: {
-        'tab-photo': {
-          templateUrl: 'templates/tab-photo.html',
-          controller: 'PhotoCtrl'
-        }
+    url: '/photo',
+    views: {
+      'tab-photo': {
+        templateUrl: 'templates/tab-photo.html',
+        controller: 'PhotoCtrl'
       }
-    })
+    }
+  })
 
-    .state('tab.photo-detail', {
-        url: '/photo/detail',
-        views: {
-          'tab-photo': {
-            templateUrl: 'templates/photo-detail.html',
-            controller: 'PhotoDetailCtrl'
-          }
-        }
-      })
+  .state('tab.photo-detail', {
+    url: '/photo/detail',
+    views: {
+      'tab-account': {
+        templateUrl: 'templates/photo-detail.html',
+        controller: 'PhotoDetailCtrl'
+      }
+    }
+  })
 
   .state('tab.chats', {
       url: '/chats',

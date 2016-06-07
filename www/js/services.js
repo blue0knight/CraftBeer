@@ -1,5 +1,6 @@
 angular.module('starter.services', [])
 
+
   .factory('Products', function(FURL, $firebaseArray) {
     var ref = new Firebase(FURL);
     var products = $firebaseArray(ref.child('products'));

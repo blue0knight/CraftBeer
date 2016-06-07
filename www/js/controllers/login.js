@@ -11,7 +11,7 @@ app.controller('LoginCtrl', function($scope, $state, $ionicPopup, Auth){
   // An elaborate, custom popup
   var myPopup = $ionicPopup.show({
     templateUrl: 'templates/partials/login.html',
-    title: 'Signin',
+    title: 'Sign in',
     subTitle: 'Make sure you enter them correctly',
     scope: $scope,
     buttons: [
